@@ -25,7 +25,7 @@ namespace ChatBox
 
 		private async void btnSend_Click(object sender, EventArgs e)
 		{
-			var message = txtMessage.Text.Trim();
+			var message = txtMessage.Texts.Trim();
 			await SendMessageAsync(message);
 
 		}
@@ -36,7 +36,7 @@ namespace ChatBox
 
 			if (message.Length > 0)
 			{
-				txtMessage.Text = "";
+				txtMessage.Texts = "";
 				btnSend.Text = "Waiting...";
 
 				txtBody.SelectionAlignment = HorizontalAlignment.Left;
@@ -67,7 +67,7 @@ namespace ChatBox
 		{
 			if (e.KeyCode == Keys.Enter)
 			{
-				var message = txtMessage.Text.Trim();
+				var message = txtMessage.Texts.Trim();
 				await SendMessageAsync(message);
 			}
 		}

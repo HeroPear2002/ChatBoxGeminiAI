@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.btnSend = new CustomUI.CXHUI.CXHButton();
+			this.txtMessage = new CustomUI.CXHUI.CXHTextBox();
 			this.txtBody = new System.Windows.Forms.RichTextBox();
-			this.txtMessage = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// btnSend
@@ -52,6 +52,28 @@
 			this.btnSend.UseVisualStyleBackColor = false;
 			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
 			// 
+			// txtMessage
+			// 
+			this.txtMessage.BorderColor = System.Drawing.Color.MediumSlateBlue;
+			this.txtMessage.BorderFocusColor = System.Drawing.Color.HotPink;
+			this.txtMessage.BorderRadius = 0;
+			this.txtMessage.BorderSize = 2;
+			this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtMessage.ForeColor = System.Drawing.Color.DimGray;
+			this.txtMessage.Location = new System.Drawing.Point(33, 332);
+			this.txtMessage.Margin = new System.Windows.Forms.Padding(4);
+			this.txtMessage.Multiline = false;
+			this.txtMessage.Name = "txtMessage";
+			this.txtMessage.Padding = new System.Windows.Forms.Padding(7);
+			this.txtMessage.PasswordChar = false;
+			this.txtMessage.PlaceholderColor = System.Drawing.Color.DarkGray;
+			this.txtMessage.PlaceholderText = "";
+			this.txtMessage.Size = new System.Drawing.Size(416, 31);
+			this.txtMessage.TabIndex = 3;
+			this.txtMessage.Texts = "";
+			this.txtMessage.UnderlinedStyle = false;
+			this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMessage_KeyDown);
+			// 
 			// txtBody
 			// 
 			this.txtBody.Location = new System.Drawing.Point(33, 12);
@@ -59,13 +81,6 @@
 			this.txtBody.Size = new System.Drawing.Size(541, 301);
 			this.txtBody.TabIndex = 2;
 			this.txtBody.Text = "";
-			// 
-			// txtMessage
-			// 
-			this.txtMessage.Location = new System.Drawing.Point(33, 332);
-			this.txtMessage.Name = "txtMessage";
-			this.txtMessage.Size = new System.Drawing.Size(417, 20);
-			this.txtMessage.TabIndex = 3;
 			// 
 			// Form1
 			// 
@@ -79,15 +94,14 @@
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private CustomUI.CXHUI.CXHButton btnSend;
+		private CustomUI.CXHUI.CXHTextBox txtMessage;
 		private System.Windows.Forms.RichTextBox txtBody;
-		private System.Windows.Forms.TextBox txtMessage;
 	}
 }
 
